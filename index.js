@@ -1,6 +1,17 @@
-define([],function(){
-  //TODO: Implements the AMD module
-  console.log("Module 3: loaded");
-  
-  return 'Hello world'
+define([], function() {  
+  return {
+    initLead(token) {
+      console.warn('WIDGET initLead with token: ', token)
+     
+      return () => {
+        console.warn('WIDGET initLead destroyed')
+      }
+    },
+    registerWidgetsBarSlot(el) {
+      console.warn('WIDGET registerWidgetsBarSlot')
+
+      return () => {
+         console.warn('WIDGET registerWidgetsBarSlot destroyed')
+      }
+  }
 });
