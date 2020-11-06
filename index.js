@@ -12,7 +12,7 @@ define([], function () {
       // console.warn('WIDGET initLead with token: ', token);
     },
     registerWidgetsBarSlot(el) {
-      console.warn('WIDGET registerWidgetsBarSlot');
+      console.warn('WIDGET registerWidgetsBarSlot', el);
 
       return () => {
         console.warn('WIDGET registerWidgetsBarSlot destroyed');
