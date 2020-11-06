@@ -1,20 +1,16 @@
 
-define(['amocrm-sdk'], function (a) {
-   console.warn('SDK', a);
-  
-  return {
-    initLead(token) {
-      // VERSION 1
-      console.warn('WIDGET initLead with token: ', token);
+define(['amocrm-sdk'], function (initAmocrmWidgetSdk) {
+  const WidgetSdk = initAmocrmWidgetSdk();
 
-      return () => {
-        console.warn('WIDGET initLead destroyed');
-      };
-      // VERSION 2
-      // console.warn('WIDGET initLead with token: ', token);
+  return {
+    initLead(params) {
+      console.warn('WIDGET initLead with token: ', params.token));
     },
     registerWidgetsBarSlot(el) {
-      console.warn('WIDGET registerWidgetsBarSlot', el);
+      console.warn('WIDGET registerWidgetsBarSlot');
+
+      const contentEl = el.querySelector(`.${WidgetSdk.constants.GLOBAL_CLASS_NAMES.widgetBarItemContent}`)
+      contentEl.innerHTML = 'Hello world!';
 
       return () => {
         console.warn('WIDGET registerWidgetsBarSlot destroyed');
