@@ -1,5 +1,7 @@
 
-define([], function () {
+define(['amocrm-sdk'], function (a) {
+   console.warn('SDK', a);
+  
   return {
     initLead(token) {
       // VERSION 1
