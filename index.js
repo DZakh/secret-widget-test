@@ -5,6 +5,10 @@ define(['amocrm-sdk'], function (initAmocrmWidgetSdk) {
   return {
     initLead(params) {
       console.warn('WIDGET initLead with token: ', params.token));
+      
+      return () => {
+        console.warn('WIDGET initLead destroyed');
+      };
     },
     registerWidgetsBarSlot(el) {
       console.warn('WIDGET registerWidgetsBarSlot');
