@@ -9,14 +9,17 @@ define([], function () {
       //   console.warn('WIDGET initLead destroyed');
       // };
       // VERSION 2
-      // return new Promise((resolve) => {
-      //   console.warn('WIDGET initLead with token: ', token);
+      return new Promise((resolve) => {
+        console.warn('WIDGET initLead with token: ', token);
 
-      //   resolve(() => {
-      //     console.warn('WIDGET initLead destroyed');
-      //   });
-      // });
-      console.warn('WIDGET initLead with token: ', token);
+        setTimeout(() => {
+          resolve(() => {
+            console.warn('WIDGET initLead destroyed');
+          });
+        }, 3000);
+      });
+      // VERSION 3
+      // console.warn('WIDGET initLead with token: ', token);
     },
     registerWidgetsBarSlot(el) {
       console.warn('WIDGET registerWidgetsBarSlot');
