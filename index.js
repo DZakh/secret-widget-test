@@ -1,5 +1,5 @@
 
-define(['amocrm-sdk'], function (initAmocrmWidgetSdk) {
+define(['amocrm-sdk'], (initAmocrmWidgetSdk) => {
   const WidgetSdk = initAmocrmWidgetSdk();
 
   return {
