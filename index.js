@@ -1,6 +1,8 @@
 
 define(['amocrm-sdk'], (initAmocrmWidgetSdk) => {
-  const WidgetSdk = initAmocrmWidgetSdk();
+  const WidgetSdk = initAmocrmWidgetSdk({
+    version: '1.0.0',
+  });
 
   return {
     initLead(params) {
@@ -11,7 +13,9 @@ define(['amocrm-sdk'], (initAmocrmWidgetSdk) => {
       };
     },
     registerWidgetsBarSlot(el) {
-      console.warn('WIDGET registerWidgetsBarSlot');
+      const sysData = WidgetSdk.methods.getModel('sys');
+
+      console.warn('WIDGET registerWidgetsBarSlot with sys data: ', sysData);
 
       const contentEl = el.querySelector(
         `.${WidgetSdk.constants.GLOBAL_CLASS_NAMES.widgetBarItemContent}`
