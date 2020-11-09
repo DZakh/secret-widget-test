@@ -17,10 +17,7 @@ define(['amocrm-sdk'], (initAmocrmWidgetSdk) => {
 
       console.warn('WIDGET registerWidgetsBarSlot with sys data: ', sysData);
 
-      const contentEl = el.querySelector(
-        `.${WidgetSdk.constants.GLOBAL_CLASS_NAMES.widgetBarItemContent}`
-      );
-      contentEl.innerHTML = 'Hello world!';
+      el.innerHTML = 'Hello world!';
 
       return () => {
         console.warn('WIDGET registerWidgetsBarSlot destroyed');
