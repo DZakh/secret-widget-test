@@ -13,9 +13,7 @@ define(['amocrm-sdk'], (initAmocrmWidgetSdk) => {
       };
     },
     registerWidgetsBarSlot(el) {
-      const sysData = WidgetSdk.methods.getModel('sys');
-
-      console.warn('WIDGET registerWidgetsBarSlot with sys data: ', sysData);
+      console.warn('WIDGET registerWidgetsBarSlot with WidgetSdk: ', WidgetSdk);
 
       el.innerHTML = 'Hello world!';
 
